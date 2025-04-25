@@ -379,6 +379,8 @@ if (BUILD_CHARSET_CONVERTER_PLUGIN)
   target_sources(flutterpi_module PRIVATE src/plugins/charset_converter.c)
 endif()
 
+target_sources(flutterpi_module PRIVATE src/plugins/livision/livision.c src/plugins/livision/livision_shm.c)
+
 # Sentry Plugin
 set(HAVE_BUNDLED_CRASHPAD_HANDLER OFF)
 if (BUILD_SENTRY_PLUGIN)
