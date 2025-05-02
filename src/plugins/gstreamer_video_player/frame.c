@@ -515,7 +515,7 @@ static bool get_plane_sizes_from_video_info(const GstVideoInfo *info, size_t pla
 static bool calculate_plane_size(const GstVideoInfo *info, int plane_index, size_t *plane_size_out) {
     // Taken from: https://github.com/GStreamer/gstreamer/blob/621604aa3e4caa8db27637f63fa55fac2f7721e5/subprojects/gst-plugins-base/gst-libs/gst/video/video-info.c#L1278-L1301
 
-    #if THIS_GSTREAMER_VER >= GSTREAMER_VER(1, 21, 3)
+    #if 0 //THIS_GSTREAMER_VER >= GSTREAMER_VER(1, 21, 3)
     if (GST_VIDEO_FORMAT_INFO_IS_TILED(info->finfo)) {
         guint x_tiles = GST_VIDEO_TILE_X_TILES(info->stride[plane_index]);
         guint y_tiles = GST_VIDEO_TILE_Y_TILES(info->stride[plane_index]);
